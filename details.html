@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identity Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9fafb;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    .table th,
+    .table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .table th {
+      background-color: #f3f4f6;
+    }
+
+    .btn {
+      background-color: #4F46E5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #4338CA;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="text-4xl font-extrabold text-center text-indigo-600 mb-8">Identity Details</h1>
+
+    <table class="table">
+      <tr>
+        <th>Full Name</th>
+        <td id="nameDetail"></td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td id="ageDetail"></td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td id="addressDetail"></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td id="emailDetail"></td>
+      </tr>
+      <tr>
+        <th>Phone Number</th>
+        <td id="phoneDetail"></td>
+      </tr>
+      <tr>
+        <th>Nationality</th>
+        <td id="nationalityDetail"></td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td id="genderDetail"></td>
+      </tr>
+      <tr>
+        <th>Date of Birth</th>
+        <td id="dobDetail"></td>
+      </tr>
+      <tr>
+        <th>Education</th>
+        <td id="educationDetail"></td>
+      </tr>
+      <tr>
+        <th>Profile Picture</th>
+        <td id="profilePictureDetail"></td>
+      </tr>
+    </table>
+
+    <!-- Button to go to Credential Issuer -->
+    <button class="btn" onclick="window.location.href='credential-issuer.html'">Credential Issuer</button>
+  </div>
+
+  <script>
+    // Fetch identity data from localStorage
+    const identityData = JSON.parse(localStorage.getItem('identityData'));
+
+    // Populate the details page with the data
+    document.getElementById('nameDetail').innerText = identityData.name;
+    document.getElementById('ageDetail').innerText = identityData.age;
+    document.getElementById('addressDetail').innerText = identityData.address;
+    document.getElementById('emailDetail').innerText = identityData.email;
+    document.getElementById('phoneDetail').innerText = identityData.phoneNumber;
+    document.getElementById('nationalityDetail').innerText = identityData.nationality;
+    document.getElementById('genderDetail').innerText = identityData.gender;
+    document.getElementById('dobDetail').innerText = identityData.dateOfBirth;
+    document.getElementById('educationDetail').innerText = identityData.education;
+
+    // If there was a profile picture
+    document.getElementById('profilePictureDetail').innerText = identityData.profilePicture ? 'Profile Picture Uploaded' : 'No Profile Picture';
+  </script>
+
+</body>
+
+</html>

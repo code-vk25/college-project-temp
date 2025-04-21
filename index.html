@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identity Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table td,
+    .table th {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .table th {
+      background-color: #f3f4f6;
+      font-weight: 600;
+    }
+
+    .input {
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      width: 100%;
+      background-color: #f9fafb;
+      font-size: 1rem;
+    }
+
+    .btn {
+      background-color: #4F46E5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #4338CA;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="text-4xl font-extrabold text-center text-indigo-600 mb-8">Identity Registration</h1>
+
+    <form id="registrationForm" class="bg-white p-6 rounded-lg shadow-md space-y-6">
+      <table class="table">
+        <!-- Full Name -->
+        <tr>
+          <th><label for="name" class="block text-lg font-medium">Full Name</label></th>
+          <td><input type="text" id="name" name="name" class="input" required></td>
+        </tr>
+
+        <!-- Age -->
+        <tr>
+          <th><label for="age" class="block text-lg font-medium">Age</label></th>
+          <td><input type="number" id="age" name="age" class="input" required></td>
+        </tr>
+
+        <!-- Address -->
+        <tr>
+          <th><label for="address" class="block text-lg font-medium">Address</label></th>
+          <td><textarea id="address" name="address" class="input" rows="3" required></textarea></td>
+        </tr>
+
+        <!-- Email -->
+        <tr>
+          <th><label for="email" class="block text-lg font-medium">Email Address</label></th>
+          <td><input type="email" id="email" name="email" class="input" required></td>
+        </tr>
+
+        <!-- Phone Numbers -->
+        <tr>
+          <th><label for="phoneNumber" class="block text-lg font-medium">Phone Number</label></th>
+          <td><input type="tel" id="phoneNumber" name="phoneNumber" class="input" required></td>
+        </tr>
+
+        <!-- Nationality -->
+        <tr>
+          <th><label for="nationality" class="block text-lg font-medium">Nationality</label></th>
+          <td><input type="text" id="nationality" name="nationality" class="input" required></td>
+        </tr>
+
+        <!-- Gender -->
+        <tr>
+          <th><label for="gender" class="block text-lg font-medium">Gender</label></th>
+          <td>
+            <select id="gender" name="gender" class="input" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- Date of Birth -->
+        <tr>
+          <th><label for="dateOfBirth" class="block text-lg font-medium">Date of Birth</label></th>
+          <td><input type="date" id="dateOfBirth" name="dateOfBirth" class="input" required></td>
+        </tr>
+
+        <!-- Academic Qualifications -->
+        <tr>
+          <th><label for="education" class="block text-lg font-medium">Academic Qualifications</label></th>
+          <td>
+            <select id="education" name="education" class="input" required>
+              <option value="">Select Qualification</option>
+              <option value="highschool">High School</option>
+              <option value="bachelor">Bachelor's Degree</option>
+              <option value="master">Master's Degree</option>
+              <option value="phd">PhD</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- Profile Picture -->
+        <tr>
+          <th><label for="profilePicture" class="block text-lg font-medium">Profile Picture</label></th>
+          <td><input type="file" id="profilePicture" name="profilePicture" class="input"></td>
+        </tr>
+      </table>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn mt-4">
+        Register Identity
+      </button>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Collect form data
+      const formData = new FormData(event.target);
+
+      const data = {
+        name: formData.get('name'),
+        age: formData.get('age'),
+        address: formData.get('address'),
+        email: formData.get('email'),
+        phoneNumber: formData.get('phoneNumber'),
+        nationality: formData.get('nationality'),
+        gender: formData.get('gender'),
+        dateOfBirth: formData.get('dateOfBirth'),
+        education: formData.get('education'),
+        profilePicture: formData.get('profilePicture')
+      };
+
+      // Store data in localStorage
+      localStorage.setItem('identityData', JSON.stringify(data));
+
+      // Redirect to the details page
+      window.location.href = 'details.html';
+    });
+  </script>
+
+</body>
+
+</html>

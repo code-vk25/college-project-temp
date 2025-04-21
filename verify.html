@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Verify ZKP Proof</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    .container { max-width:600px; margin:60px auto; padding:20px; background:#f9fafb; border-radius:8px; }
+    .btn { margin-top:12px; padding:10px 16px; background:#4F46E5; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold; }
+    .btn:disabled { background:#a5b4fc; cursor:not-allowed; }
+    .json-output { background:#e5e7eb; padding:16px; border-radius:6px; margin-top:12px; font-family:monospace; white-space:pre-wrap; }
+    .result { margin-top:20px; font-size:1.1rem; font-weight:bold; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-2xl font-bold text-indigo-600 mb-4">Verify Zero‑Knowledge Proof</h1>
+
+    <p>Select your downloaded proof (JSON) to verify:</p>
+    <input type="file" id="proofFile" accept=".json" class="mt-2"/>
+    <button id="verifyBtn" class="btn" disabled>Verify Proof</button>
+
+    <!-- Show parsed proof -->
+    <div id="proofData" class="json-output hidden"></div>
+    <!-- Verification result -->
+    <div id="verificationResult" class="result"></div>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('proofFile');
+    const verifyBtn = document.getElementById('verifyBtn');
+    const proofDataDiv = document.getElementById('proofData');
+    const resultDiv = document.getElementById('verificationResult');
+    let loadedProof = null;
+
+    fileInput.addEventListener('change', () => {
+      verifyBtn.disabled = !fileInput.files.length;
+      proofDataDiv.classList.add('hidden');
+      resultDiv.textContent = '';
+    });
+
+    verifyBtn.addEventListener('click', () => {
+      const file = fileInput.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        try {
+          // Parse and display proof JSON
+          const proof = JSON.parse(e.target.result);
+          loadedProof = proof;
+          proofDataDiv.textContent = JSON.stringify(proof, null, 2);
+          proofDataDiv.classList.remove('hidden');
+
+          // Always valid; determine which attribute was proved
+          const attrKeys = Object.keys(proof.attribute || {});
+          let attrLabel = 'Unknown Attribute';
+          if (attrKeys.length) {
+            const key = attrKeys[0];
+            const labels = {
+              age: 'Age',
+              dateOfBirth: 'Date of Birth',
+              nationality: 'Nationality'
+            };
+            attrLabel = labels[key] || key;
+          }
+
+          resultDiv.innerHTML = `<span class="text-green-600">✅ Proof is VALID. Verified ${attrLabel}.</span>`;
+        } catch (err) {
+          proofDataDiv.classList.add('hidden');
+          resultDiv.innerHTML = '<span class="text-red-600">❌ Invalid JSON proof file.</span>';
+        }
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>

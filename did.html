@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Decentralized Identity (Merkle DID + Proofs)</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    .container { max-width:700px; margin:40px auto; padding:20px; background:#f9fafb; border-radius:8px; }
+    .btn { margin-top:12px; padding:10px 16px; background:#4F46E5; color:#fff; border-radius:6px; cursor:pointer; font-weight:bold; }
+    .json-output { background:#e5e7eb; padding:16px; border-radius:6px; margin-top:12px; font-family:monospace; white-space:pre-wrap; }
+    .attribute-list label { display:block; margin:6px 0; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-2xl font-bold text-indigo-600 mb-4">Your Decentralized Identity</h1>
+    <p><strong>DID (Merkle Root):</strong> <span id="didValue" class="font-mono"></span></p>
+    <h2 class="mt-6 font-semibold">Select Attributes to Prove</h2>
+    <div class="attribute-list">
+      <label><input type="checkbox" name="attr" value="age"/> Age</label>
+      <label><input type="checkbox" name="attr" value="dateOfBirth"/> Date of Birth</label>
+      <label><input type="checkbox" name="attr" value="nationality"/> Nationality</label>
+    </div>
+
+    <button id="genProofBtn" class="btn">Generate Merkle Proof</button>
+    <button id="verifyProofBtn" class="btn" disabled>Verify Proof</button>
+
+    <div id="proofOutput" class="json-output hidden"></div>
+    <a id="downloadProof" class="btn hidden" download="merkle-proof.json">Download Proof JSON</a>
+    <div id="verificationResult" class="mt-4 font-semibold"></div>
+  </div>
+
+  <script>
+    //--- raw helpers ---
+    const hash = s => CryptoJS.SHA256(s).toString();
+    function buildMerkleTree(leaves) {
+      const tree = [leaves];
+      let level = leaves;
+      while (level.length > 1) {
+        const next = [];
+        for (let i = 0; i < level.length; i += 2) {
+          const l = level[i];
+          const r = (i+1 < level.length ? level[i+1] : level[i]);
+          next.push(hash(l + r));
+        }
+        tree.push(next);
+        level = next;
+      }
+      return tree;
+    }
+    function getMerkleRoot(tree) {
+      return tree[tree.length - 1][0];
+    }
+    function getMerkleProof(tree, index) {
+      const proof = [];
+      for (let lvl = 0; lvl < tree.length - 1; lvl++) {
+        const level = tree[lvl];
+        const isRight = index % 2 === 1;
+        const pairIndex = isRight ? index - 1 : index + 1;
+        const sibling = level[pairIndex] || level[index];
+        proof.push({ hash: sibling, position: isRight ? 'left' : 'right' });
+        index = Math.floor(index / 2);
+      }
+      return proof;
+    }
+
+    //--- page logic ---
+    const credential = JSON.parse(localStorage.getItem('credential') || '{}');
+    // 1) build leaves = hash(key + ':' + value)
+    const entries = Object.entries(credential)
+      .filter(([k]) => ['fullName','age','address','email','phoneNumber','nationality','gender','dateOfBirth','education'].includes(k));
+    const leaves = entries.map(([k,v]) => hash(k+':'+v));
+    const tree = buildMerkleTree(leaves);
+    const root = getMerkleRoot(tree);
+    document.getElementById('didValue').innerText = root;
+
+    let lastProof = null;
+
+    document.getElementById('genProofBtn').onclick = () => {
+      const checked = Array.from(document.querySelectorAll('input[name="attr"]:checked'))
+                           .map(cb => cb.value);
+      if (!checked.length) return alert('Select at least one attribute.');
+
+      // for simplicity, only prove the first selected attribute
+      const attr = checked[0];
+      const idx = entries.findIndex(([k]) => k === attr);
+      const leafHash = leaves[idx];
+      const proof = getMerkleProof(tree, idx);
+
+      lastProof = { did: root, attribute: { [attr]: credential[attr] }, leafHash, proof, generatedAt: new Date().toISOString() };
+
+      const out = document.getElementById('proofOutput');
+      out.textContent = JSON.stringify(lastProof, null, 2);
+      out.classList.remove('hidden');
+
+      const blob = new Blob([JSON.stringify(lastProof, null, 2)], { type: 'application/json' });
+      const link = document.getElementById('downloadProof');
+      link.href = URL.createObjectURL(blob);
+      link.classList.remove('hidden');
+
+      document.getElementById('verifyProofBtn').disabled = false;
+      document.getElementById('verificationResult').innerText = '';
+    };
+
+    document.getElementById('verifyProofBtn').onclick = () => {
+      if (!lastProof) return;
+      // recompute up from leaf using proof
+      let computed = lastProof.leafHash;
+      lastProof.proof.forEach(({hash: sib, position}) => {
+        computed = position === 'left'
+          ? hash(sib + computed)
+          : hash(computed + sib);
+      });
+      const ok = computed === lastProof.did;
+      document.getElementById('verificationResult').innerHTML =
+        ok
+          ? '<span class="text-green-600">✅ Proof is VALID</span>'
+          : '<span class="text-red-600">❌ Proof is INVALID</span>';
+    };
+  </script>
+</body>
+</html>
