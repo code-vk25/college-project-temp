@@ -1,0 +1,2080 @@
+{
+  "data": [
+    {
+      "traceID": "1afb2692b089ec63637968199d8229c9",
+      "spans": [
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "bf896822da7e1be9",
+          "operationName": "Register Identity",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "e0ed8844819ef15c"
+            }
+          ],
+          "startTime": 1744223587084619,
+          "duration": 5851,
+          "tags": [
+            {
+              "key": "item.name",
+              "type": "string",
+              "value": "Abhinav"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "flow.step",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "identity.demo",
+              "type": "string",
+              "value": "decentralized-identity-zkp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "5febab2327702811",
+          "operationName": "Issue Credential",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223612474679,
+          "duration": 70,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "flow.step",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "identity.demo",
+              "type": "string",
+              "value": "decentralized-identity-zkp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "9493011c5ee0ff3e",
+          "operationName": "Create DID (Merkle Root)",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "85d36529d0faef18"
+            }
+          ],
+          "startTime": 1744223558586560,
+          "duration": 566,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "flow.step",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "identity.demo",
+              "type": "string",
+              "value": "decentralized-identity-zkp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "4b0fd5c83974e89b",
+          "operationName": "Generate ZKP Proof (Age)",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223558575491,
+          "duration": 11996,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "flow.step",
+              "type": "string",
+              "value": "4"
+            },
+            {
+              "key": "identity.demo",
+              "type": "string",
+              "value": "decentralized-identity-zkp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "cd0eab33dd073153",
+          "operationName": "Verify ZKP (verify.html)",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223616786519,
+          "duration": 260,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Last Updated"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "flow.step",
+              "type": "string",
+              "value": "5"
+            },
+            {
+              "key": "identity.demo",
+              "type": "string",
+              "value": "decentralized-identity-zkp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "15a1dd9a0697573a",
+          "operationName": "Clear Form Fields",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "60a19b943313c97b"
+            }
+          ],
+          "startTime": 1744223510343797,
+          "duration": 81,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "7e915b8c9b3e9445",
+          "operationName": "MainApp:Initialize",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223482355766,
+          "duration": 13202,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "a5b5456f32f72ff9",
+          "operationName": "Add Item Logic",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "28fa10fdedf534f9"
+            }
+          ],
+          "startTime": 1744223525931395,
+          "duration": 12125,
+          "tags": [
+            {
+              "key": "item.name",
+              "type": "string",
+              "value": "Amrit"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "28fa10fdedf534f9",
+          "operationName": "Add Item",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223525931079,
+          "duration": 12466,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "ba1919761dad261b",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223591833927,
+          "duration": 308,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "fd0037a046fa4806",
+          "operationName": "Clear Form Fields",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "42f97210725274c1"
+            }
+          ],
+          "startTime": 1744223599469256,
+          "duration": 105,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "084d8e9fb87b9e0e",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223608726831,
+          "duration": 19,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "38ca57d6f3db57d1",
+          "operationName": "Export CSV Logic",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "bae6a710eae40ec3"
+            }
+          ],
+          "startTime": 1744223619230439,
+          "duration": 1517438,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "9b9fd35f1573eb09",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "7e915b8c9b3e9445"
+            }
+          ],
+          "startTime": 1744223482367311,
+          "duration": 1635,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "f3fc0b0fd04d8519",
+          "operationName": "LoginScreen:CheckPassword",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f05f84edb97b6a52"
+            }
+          ],
+          "startTime": 1744223482319742,
+          "duration": 186463481,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "OK"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "user.input_password",
+              "type": "string",
+              "value": "admin123"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "b595991bfdacc9ab",
+          "operationName": "Toggle Dark Mode",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "b0a5cbefbfca1fbe"
+            }
+          ],
+          "startTime": 1744223622213860,
+          "duration": 2048,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "a287b78aff8059c7",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223607197886,
+          "duration": 69,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "bc984888fa87e67f",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223617650986,
+          "duration": 79,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "c1adcf947a1519de",
+          "operationName": "Update Stats",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "dff254596b6ff5d4"
+            }
+          ],
+          "startTime": 1744223510343054,
+          "duration": 538,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "e6a6a7038390293f",
+          "operationName": "Clear Form Fields",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "7a9fbc56b7fcef0b"
+            }
+          ],
+          "startTime": 1744223570719624,
+          "duration": 73,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "46b1c577a20a780e",
+          "operationName": "Add Item",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223570708231,
+          "duration": 11521,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "2eaab5cb18e6d5d7",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223616785906,
+          "duration": 70,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "bae6a710eae40ec3",
+          "operationName": "Export CSV",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223619230263,
+          "duration": 1517643,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "6553c2d226751209",
+          "operationName": "LoginScreen:CheckPassword",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f05f84edb97b6a52"
+            }
+          ],
+          "startTime": 1744223471537268,
+          "duration": 1464266,
+          "tags": [
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "ERROR"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            },
+            {
+              "key": "user.input_password",
+              "type": "string",
+              "value": "testapp"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "42f97210725274c1",
+          "operationName": "Update Item Logic",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "c0d0dc876f2cca17"
+            }
+          ],
+          "startTime": 1744223599458856,
+          "duration": 10541,
+          "tags": [
+            {
+              "key": "item.id",
+              "type": "int64",
+              "value": 12
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "32176fde0052c4b6",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223610379094,
+          "duration": 308,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Description"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "b0a5cbefbfca1fbe",
+          "operationName": "Toggle Dark Mode",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223622213729,
+          "duration": 2236,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "613396e4a9cb3a2a",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "7a9fbc56b7fcef0b"
+            }
+          ],
+          "startTime": 1744223570718155,
+          "duration": 1336,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "4f0d2fe3a8073676",
+          "operationName": "Add Item",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223510331676,
+          "duration": 12261,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "7a9fbc56b7fcef0b",
+          "operationName": "Add Item Logic",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "46b1c577a20a780e"
+            }
+          ],
+          "startTime": 1744223570708531,
+          "duration": 11198,
+          "tags": [
+            {
+              "key": "item.name",
+              "type": "string",
+              "value": "Harsh"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "459f1238106e0046",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223606254211,
+          "duration": 72,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "e50b3d97396e1d2c",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223612475272,
+          "duration": 296,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Category"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "81872bc634e5e361",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223613061195,
+          "duration": 344,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Category"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "a16ab171edf29435",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223615824221,
+          "duration": 293,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Last Updated"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "dff254596b6ff5d4",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "60a19b943313c97b"
+            }
+          ],
+          "startTime": 1744223510342413,
+          "duration": 1245,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "d5e74a152b5f0ff4",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223610933904,
+          "duration": 299,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Description"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "f05f84edb97b6a52",
+          "operationName": "LoginScreen:Show",
+          "references": [],
+          "startTime": 1744223461383329,
+          "duration": 207400072,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "335349372feac01d",
+          "operationName": "Clear Form Fields",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "157cfe176f4a58aa"
+            }
+          ],
+          "startTime": 1744223558587352,
+          "duration": 80,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "34010b29b2d10911",
+          "operationName": "Update Stats",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f38858941f4f4827"
+            }
+          ],
+          "startTime": 1744223587089673,
+          "duration": 439,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "f38858941f4f4827",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "bf896822da7e1be9"
+            }
+          ],
+          "startTime": 1744223587088808,
+          "duration": 1365,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "e0ed8844819ef15c",
+          "operationName": "Add Item",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223587084352,
+          "duration": 6142,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "61230ed964dafade",
+          "operationName": "Update Stats",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "b2f5f34f6b33fc07"
+            }
+          ],
+          "startTime": 1744223599468686,
+          "duration": 372,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "c0d0dc876f2cca17",
+          "operationName": "Update Item",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223599458693,
+          "duration": 10730,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "157cfe176f4a58aa",
+          "operationName": "Add Item Logic",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "4b0fd5c83974e89b"
+            }
+          ],
+          "startTime": 1744223558575764,
+          "duration": 11700,
+          "tags": [
+            {
+              "key": "item.name",
+              "type": "string",
+              "value": "Suvarna"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "9ea5769ffbd55070",
+          "operationName": "Clear Form Fields",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "a5b5456f32f72ff9"
+            }
+          ],
+          "startTime": 1744223525943387,
+          "duration": 94,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "b2f5f34f6b33fc07",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "42f97210725274c1"
+            }
+          ],
+          "startTime": 1744223599467833,
+          "duration": 1288,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "96bd870d07e1786f",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223606255039,
+          "duration": 313,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "ID"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "fd3f0cafc4e279de",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223609305041,
+          "duration": 275,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Name"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "60a19b943313c97b",
+          "operationName": "Add Item Logic",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "4f0d2fe3a8073676"
+            }
+          ],
+          "startTime": 1744223510331935,
+          "duration": 11976,
+          "tags": [
+            {
+              "key": "item.name",
+              "type": "string",
+              "value": "Vishal"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "0bf2dda7c3736f00",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223615207502,
+          "duration": 72,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "7282189ae700b9b8",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223617651604,
+          "duration": 265,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Last Updated"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "165924734d50054e",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223613060598,
+          "duration": 71,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "981d0135f0ff6608",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223607198528,
+          "duration": 272,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "ID"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "689c1c7476cfba57",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "a5b5456f32f72ff9"
+            }
+          ],
+          "startTime": 1744223525941682,
+          "duration": 1505,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "9b3e851bd7d0ea00",
+          "operationName": "Update Stats",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "613396e4a9cb3a2a"
+            }
+          ],
+          "startTime": 1744223570719000,
+          "duration": 427,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "4789abb2a174077d",
+          "operationName": "Clear Form Fields",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "bf896822da7e1be9"
+            }
+          ],
+          "startTime": 1744223587090310,
+          "duration": 124,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "4be157530c62fef3",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223608726974,
+          "duration": 63,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Name"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "e3622d495c42583b",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223610378392,
+          "duration": 73,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "21daf419637c28d6",
+          "operationName": "Update Stats",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "9b9fd35f1573eb09"
+            }
+          ],
+          "startTime": 1744223482368372,
+          "duration": 512,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "2dd54d48b9c17784",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223610933153,
+          "duration": 72,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "0c9647ffe91d0ba6",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223615823638,
+          "duration": 72,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "85d36529d0faef18",
+          "operationName": "Load Items",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "157cfe176f4a58aa"
+            }
+          ],
+          "startTime": 1744223558585821,
+          "duration": 1369,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "c94523d4a48336d6",
+          "operationName": "Sort Column",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223615208101,
+          "duration": 307,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "sort.column",
+              "type": "string",
+              "value": "Last Updated"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "9e482e38e49eb429",
+          "operationName": "Fill Form from Tree Selection",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "f3fc0b0fd04d8519"
+            }
+          ],
+          "startTime": 1744223609304299,
+          "duration": 107,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "1afb2692b089ec63637968199d8229c9",
+          "spanID": "6f543eea303cd04e",
+          "operationName": "Update Stats",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "1afb2692b089ec63637968199d8229c9",
+              "spanID": "689c1c7476cfba57"
+            }
+          ],
+          "startTime": 1744223525942418,
+          "duration": 700,
+          "tags": [
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "__main__"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "internal"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "unknown_service",
+          "tags": [
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.31.1"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 0,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}
